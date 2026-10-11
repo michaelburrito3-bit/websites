@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <defs>
+    <radialGradient id="steel" cx="50%" cy="40%" r="65%">
+      <stop offset="0" stop-color="#5b6470"/>
+      <stop offset="1" stop-color="#262b32"/>
+    </radialGradient>
+    <linearGradient id="arc" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd27a"/>
+      <stop offset="0.5" stop-color="#ff8a1f"/>
+      <stop offset="1" stop-color="#d9480f"/>
+    </linearGradient>
+    <linearGradient id="rod" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9aa3ad"/>
+      <stop offset="0.5" stop-color="#e6eaee"/>
+      <stop offset="1" stop-color="#7d8691"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fff3c4"/>
+      <stop offset="0.35" stop-color="#ffb347" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ff6a00" stop-opacity="0"/>
+    </radialGradient>
+    <path id="topArc" d="M 160 500 A 340 340 0 0 1 840 500"/>
+    <path id="botArc" d="M 80 500 A 420 420 0 0 0 920 500"/>
+  </defs>
+
+  <!-- outer badge -->
+  <circle cx="500" cy="500" r="480" fill="#15181c"/>
+  <circle cx="500" cy="500" r="462" fill="none" stroke="url(#arc)" stroke-width="10"/>
+  <circle cx="500" cy="500" r="300" fill="url(#steel)" stroke="url(#arc)" stroke-width="10"/>
+  <circle cx="500" cy="500" r="440" fill="none" stroke="#3a414a" stroke-width="3"/>
+
+  <!-- ring text -->
+  <text font-family="Impact, 'Anton', 'Arial Black', sans-serif" font-size="88" font-weight="900" fill="#f2f4f6" letter-spacing="6" text-anchor="middle">
+    <textPath href="#topArc" startOffset="50%">GRIZZLY WELDING</textPath>
+  </text>
+  <text font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="50" fill="#ff8a1f" letter-spacing="6" text-anchor="middle">
+    <textPath href="#botArc" startOffset="50%">FABRICATION &amp; REPAIR</textPath>
+  </text>
+  <!-- side rivets -->
+  <g fill="url(#arc)">
+    <polygon points="56,500 70,488 84,500 70,512"/>
+    <polygon points="916,500 930,488 944,500 930,512"/>
+  </g>
+
+  <!-- crossed electrode / TIG rod -->
+  <g stroke-linecap="round">
+    <line x1="290" y1="300" x2="710" y2="720" stroke="#0e1013" stroke-width="30"/>
+    <line x1="710" y1="300" x2="290" y2="720" stroke="#0e1013" stroke-width="30"/>
+    <line x1="290" y1="300" x2="710" y2="720" stroke="url(#rod)" stroke-width="18"/>
+    <line x1="710" y1="300" x2="290" y2="720" stroke="url(#rod)" stroke-width="18"/>
+  </g>
+  <!-- arc sparks at rod tips -->
+  <g>
+    <circle cx="290" cy="300" r="40" fill="url(#glow)"/>
+    <circle cx="710" cy="300" r="40" fill="url(#glow)"/>
+    <g stroke="#ffcf66" stroke-width="4" stroke-linecap="round">
+      <line x1="290" y1="300" x2="250" y2="270"/><line x1="290" y1="300" x2="262" y2="320"/>
+      <line x1="290" y1="300" x2="300" y2="256"/><line x1="290" y1="300" x2="246" y2="298"/>
+      <line x1="710" y1="300" x2="750" y2="270"/><line x1="710" y1="300" x2="738" y2="320"/>
+      <line x1="710" y1="300" x2="700" y2="256"/><line x1="710" y1="300" x2="754" y2="298"/>
+    </g>
+  </g>
+
+  <!-- grizzly head -->
+  <g>
+    <!-- ears -->
+    <circle cx="392" cy="352" r="48" fill="#1b1512" stroke="#0b0908" stroke-width="6"/>
+    <circle cx="608" cy="352" r="48" fill="#1b1512" stroke="#0b0908" stroke-width="6"/>
+    <circle cx="394" cy="356" r="22" fill="#6b4a33"/>
+    <circle cx="606" cy="356" r="22" fill="#6b4a33"/>
+    <!-- head -->
+    <path d="M 500 330 C 560 330 625 345 640 410 L 660 480 C 670 545 620 600 560 625 L 500 645 L 440 625 C 380 600 330 545 340 480 L 360 410 C 375 345 440 330 500 330 Z"
+          fill="#2b211b" stroke="#0b0908" stroke-width="8" stroke-linejoin="round"/>
+    <!-- fur tufts on cheeks -->
+    <path d="M 342 488 L 318 520 L 350 515 L 334 552 L 368 538 Z" fill="#2b211b" stroke="#0b0908" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M 658 488 L 682 520 L 650 515 L 666 552 L 632 538 Z" fill="#2b211b" stroke="#0b0908" stroke-width="6" stroke-linejoin="round"/>
+    <!-- forehead highlight -->
+    <path d="M 500 345 C 470 345 440 360 430 395 L 500 420 L 570 395 C 560 360 530 345 500 345 Z" fill="#3d2f25"/>
+    <!-- brows -->
+    <path d="M 405 438 L 478 455 L 470 470 L 412 458 Z" fill="#0b0908"/>
+    <path d="M 595 438 L 522 455 L 530 470 L 588 458 Z" fill="#0b0908"/>
+    <!-- glowing eyes (arc reflection) -->
+    <path d="M 420 462 L 466 472 L 452 486 L 428 480 Z" fill="url(#arc)"/>
+    <path d="M 580 462 L 534 472 L 548 486 L 572 480 Z" fill="url(#arc)"/>
+    <!-- muzzle -->
+    <path d="M 500 485 C 555 485 585 520 580 560 C 575 600 540 618 500 622 C 460 618 425 600 420 560 C 415 520 445 485 500 485 Z" fill="#8a6446" stroke="#0b0908" stroke-width="6"/>
+    <path d="M 500 492 C 540 492 562 515 562 540 L 500 555 L 438 540 C 438 515 460 492 500 492 Z" fill="#a37a57"/>
+    <!-- nose -->
+    <path d="M 462 518 C 480 508 520 508 538 518 C 540 535 520 552 500 556 C 480 552 460 535 462 518 Z" fill="#0b0908"/>
+    <ellipse cx="488" cy="522" rx="10" ry="5" fill="#5a5f66"/>
+    <!-- mouth -->
+    <path d="M 500 556 L 500 574" stroke="#0b0908" stroke-width="6" stroke-linecap="round"/>
+    <path d="M 456 596 C 470 578 530 578 544 596 C 530 604 470 604 456 596 Z" fill="#0b0908"/>
+    <path d="M 468 588 L 476 604 L 482 586 Z M 532 588 L 524 604 L 518 586 Z" fill="#f2efe8"/>
+  </g>
+
+  <!-- banner -->
+  <g>
+    <path d="M 225 660 L 775 660 L 800 702 L 775 744 L 225 744 L 200 702 Z" fill="#0e1013" stroke="url(#arc)" stroke-width="6" stroke-linejoin="round"/>
+    <text x="500" y="716" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="38" fill="#f2f4f6" letter-spacing="2" text-anchor="middle">ALUMINUM <tspan fill="#ff8a1f">•</tspan> TIG <tspan fill="#ff8a1f">•</tspan> STICK</text>
+  </g>
+</svg>
