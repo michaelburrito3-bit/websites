@@ -28,6 +28,27 @@
       <circle cx="32" cy="10" r="1.6" fill="#fbe9e4"/>
       <circle cx="8" cy="36" r="1.6" fill="#fbe9e4"/>
     </pattern>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7d8691"/>
+      <stop offset="0.5" stop-color="#e6eaee"/>
+      <stop offset="1" stop-color="#6b737d"/>
+    </linearGradient>
+    <linearGradient id="grip" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a3e45"/>
+      <stop offset="0.5" stop-color="#1e2024"/>
+      <stop offset="1" stop-color="#0e0f11"/>
+    </linearGradient>
+    <linearGradient id="cup" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c97a68"/>
+      <stop offset="0.5" stop-color="#f3c2b2"/>
+      <stop offset="1" stop-color="#b8665a"/>
+    </linearGradient>
+    <radialGradient id="arcGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.25" stop-color="#ffd2c2"/>
+      <stop offset="0.55" stop-color="#ff3b1f" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#ff3b1f" stop-opacity="0"/>
+    </radialGradient>
     <path id="topArc" d="M 160 500 A 340 340 0 0 1 840 500"/>
     <path id="botArc" d="M 80 500 A 420 420 0 0 0 920 500"/>
   </defs>
@@ -57,6 +78,9 @@
     <circle cx="615" cy="322" r="46" fill="#1b1512" stroke="#0b0908" stroke-width="6"/>
     <circle cx="387" cy="326" r="21" fill="#6b4a33"/>
     <circle cx="613" cy="326" r="21" fill="#6b4a33"/>
+    <!-- torch cable -->
+    <path d="M 640 522 C 610 570 642 625 612 668" fill="none" stroke="#0b0908" stroke-width="22" stroke-linecap="round"/>
+    <path d="M 640 522 C 610 570 642 625 612 668" fill="none" stroke="#2a2d33" stroke-width="12" stroke-linecap="round"/>
     <!-- head -->
     <path d="M 500 335 C 560 335 625 350 640 412 L 658 480 C 668 545 620 600 560 625 L 500 645 L 440 625 C 380 600 332 545 342 480 L 360 412 C 375 350 440 335 500 335 Z"
           fill="#2b211b" stroke="#0b0908" stroke-width="8"/>
@@ -92,6 +116,31 @@
     <!-- pivot bolts -->
     <circle cx="362" cy="452" r="12" fill="url(#molten)" stroke="#0b0908" stroke-width="4"/>
     <circle cx="638" cy="452" r="12" fill="url(#molten)" stroke="#0b0908" stroke-width="4"/>
+    <!-- TIG torch held in paw -->
+    <g transform="translate(765 538) rotate(10)">
+      <!-- handle -->
+      <rect x="-132" y="-14" width="122" height="28" rx="12" fill="url(#grip)" stroke="#0b0908" stroke-width="6"/>
+      <path d="M -122 -12 V 12 M -40 -12 V 12 M -28 -12 V 12" stroke="#4a4f57" stroke-width="3"/>
+      <!-- back cap -->
+      <rect x="-13" y="-82" width="26" height="66" rx="10" fill="url(#grip)" stroke="#0b0908" stroke-width="6"/>
+      <!-- torch body -->
+      <rect x="-20" y="-22" width="40" height="44" rx="6" fill="url(#metal)" stroke="#0b0908" stroke-width="6"/>
+      <!-- ceramic cup -->
+      <path d="M -17 22 L 17 22 L 12 56 L -12 56 Z" fill="url(#cup)" stroke="#0b0908" stroke-width="6" stroke-linejoin="round"/>
+      <!-- tungsten -->
+      <rect x="-3" y="56" width="6" height="16" fill="#c9ced4" stroke="#0b0908" stroke-width="2"/>
+      <!-- arc -->
+      <circle cx="0" cy="80" r="34" fill="url(#arcGlow)"/>
+      <g stroke="#ffd2c2" stroke-width="4" stroke-linecap="round">
+        <line x1="0" y1="80" x2="-34" y2="96"/><line x1="0" y1="80" x2="34" y2="98"/>
+        <line x1="0" y1="80" x2="-40" y2="74"/><line x1="0" y1="80" x2="42" y2="72"/>
+        <line x1="0" y1="80" x2="-12" y2="112"/><line x1="0" y1="80" x2="14" y2="114"/>
+      </g>
+      <!-- paw gripping handle -->
+      <ellipse cx="-92" cy="2" rx="34" ry="28" fill="#2b211b" stroke="#0b0908" stroke-width="6"/>
+      <path d="M -100 -12 C -86 -10 -74 -10 -64 -11 M -102 1 C -88 0 -74 0 -60 1 M -100 14 C -86 13 -74 13 -64 13" fill="none" stroke="#0b0908" stroke-width="4" stroke-linecap="round"/>
+      <path d="M -62 -16 L -46 -12 L -60 -6 Z M -58 -4 L -42 0 L -58 6 Z M -62 8 L -46 12 L -60 18 Z" fill="#f2efe8" stroke="#0b0908" stroke-width="2" stroke-linejoin="round"/>
+    </g>
   </g>
 
   <!-- banner -->
